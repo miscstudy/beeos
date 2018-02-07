@@ -17,12 +17,29 @@
  * License along with BeeOS; if not, see <http://www.gnu/licenses/>.
  */
 
-#ifndef _KPRINTF_H_
-#define _KPRINTF_H_
+#ifndef BEEOS_KPRINTF_H_
+#define BEEOS_KPRINTF_H_
 
 #include <stdarg.h>
 
+/**
+ * Prints a format string to the kernel stardard output.
+ * Version with variable arguments list.
+ *
+ * @param fmt   Format string pointer.
+ * @return      Number of bytes written.
+ */
 int kprintf(const char *fmt, ...);
+
+/**
+ * Prints a format string to the kernel standard output.
+ * Version with va_list argument.
+ *
+ * @param fmt   Format string pointer.
+ * @param arg   Arguments list.
+ * @return      Number of bytes written.
+ */
 int kvprintf(const char *fmt, va_list arg);
 
-#endif /* _LIBK_H_ */
+#endif /* BEEOS_KPRINTF_H_ */
+
